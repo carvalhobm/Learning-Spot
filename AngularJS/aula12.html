@@ -1,0 +1,80 @@
+<html ng-app="app">
+    <head>
+        <title>Curso AngularJS</title>
+        <meta charset="UTF-8">
+        
+        <base href="/AngularJS/" />
+        
+        <script src="js/angular/angular.min.js"></script>
+        
+        <style>
+            
+            [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                display: none !important;
+            }
+            .classNgClass {
+                font-size: 50px;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div ng-controller="aula12Controller">
+            <h1>ngShow e ngHide</h1>
+            
+            <p ng-cloak>{{ variavelCloak }}</p>
+            
+            <input type="checkbox" ng-model="mostrar">Mostrar true
+            
+            <div ng-show="mostrar">
+                Este bloco é exibido quando 'mostrar' = true
+            </div>
+            <div ng-hide="mostrar">
+                Este bloco é exibido quando 'mostrar' = false
+            </div>
+            <div ng-show="!mostrar">
+                Este bloco é exibido quando 'mostrar' = !true
+            </div>
+            
+            <h1>Elemento A</h1>
+            <a href="">Abrir nova pagina</a>
+            
+            <h1>ngBindHTML</h1>
+            {{ variavelHTML }}
+            <!-- angular-sanitize -->
+            <p ng-bind-html="variavelHTML"></p>
+            
+            <h1>ngClass</h1>
+            
+            <button type="button" ng-click="minhaClass = 'classNgClass'">
+                Add Class
+            </button>
+            <button type="button" ng-click="minhaClass = ''">Remove Class</button>
+            
+            <div ng-class="minhaClass">
+                DIV para testes: tst tst tst tst tst tst
+            </div>
+            
+            <h1>ngCloak</h1>
+            <p>Previne que variaveis do tipo {{ }} sejam exibidas no browser</p>
+            
+            <h1>ngSrc</h1>
+            
+            <img ng-src="imgs/{{minhaFoto}}">
+            
+            <button type="button" ng-click="minhaFoto = 'foto1.jpg'">
+                foto1
+            </button>
+            <button type="button" ng-click="minhaFoto = 'foto2.jpg'">
+                foto2
+            </button>
+            
+        </div>
+        
+        <script src="js/angular/angular-sanitize.min.js"></script>
+                
+        <!-- Controllers -->
+        <script src="js/controller/aula12Controller.js"></script>
+    </body>      
+</html>

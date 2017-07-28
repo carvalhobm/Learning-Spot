@@ -1,0 +1,27 @@
+<html ng-app="app">
+    <head>
+        <title>Curso AngularJS</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <div ng-controller="aula10Controller">
+            <h1>Controller Aula 10</h1>
+            
+            <!-- Filtro '|' -->
+            {{ 'bruno martins' |  uppercase }} <br />
+            {{ pessoa.nome |  uppercase }} <br />
+            {{ pessoa | json | uppercase }} <br />
+            {{ 'Bruno Martins' | retornaoi }} <br />
+        </div>
+
+        <script src="js/angular/angular.min.js"></script>
+        <script src="js/module/app.module.js"></script>
+        
+        <!-- Filters -->
+        <script src="js/filters/aula10Filter.js"></script>
+        
+        <!-- Controllers -->
+        <script src="js/controller/aula10Controller.js"></script>
+    </body>      
+</html>

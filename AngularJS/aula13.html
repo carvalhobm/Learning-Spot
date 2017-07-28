@@ -1,0 +1,27 @@
+<html ng-app="app">
+    <head>
+        <title>Curso AngularJS</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <div ng-controller="aula13Controller">
+            
+            <div ng-ola ng-nome="Bruno 1"></div>
+            <ng-ola ng-nome="Bruno 2"></ng-ola>
+            <div class="ng-ola" ng-nome="Bruno 3"></div>
+            
+            <input ng-model="format" >
+            <span my-timer="format" ></span>
+            
+        </div>
+
+        <script src="js/angular/angular.min.js"></script>
+        <script src="js/module/app.module.js"></script>
+        
+        <script src="js/directives/ngTimer.js"></script>
+        
+        <!-- Controllers -->
+        <script src="js/controller/aula13Controller.js"></script>
+    </body>      
+</html>
